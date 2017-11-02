@@ -5,24 +5,22 @@ intro/first build
 tutorial/some project
 
 
-
 reference/action
-reference/alias
-reference/book
-reference/bus
-reference/cog
-reference/chain
-reference/gear
-reference/lib
-reference/relay
-reference/state
-reference/trait
-reference/wire
-
-
-
-
-
-
+reference/aliases
+reference/books
+reference/buses
+reference/calcs
+reference/cogs
+reference/chains
+reference/destroy
+reference/display
+reference/gears
+reference/libs
+reference/mount
+reference/portals
+reference/relays
+reference/states
+reference/traits
+reference/wires
 
 
