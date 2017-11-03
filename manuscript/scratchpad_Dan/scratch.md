@@ -1,10 +1,10 @@
-- cog: A single component. Every component has its own scope which is the script you are working in.
+`cog`: A single component. Every component has its own scope which is the script you are working in.
 
-- chains: array of components
+`chains`: array of components
 
-- gears: placeholders that swap out components dynamically
+`gears`: placeholders that swap out components dynamically
 
-- aliases: represent paths and API's. You can concatenate them together the way 'defines' work in the "C" language. You can precede any of your aliases with any alias that is the base directory. In your deployment process or in your code you can refactor and just change a single spot and since all the file paths are built by concatenating aliases together, you can change a base directory or move something around and you don't have to change where those files are located in any of your code.
+`aliases`: represent paths and API's. You can concatenate them together the way 'defines' work in the "C" language. You can precede any of your aliases with any alias that is the base directory. In your deployment process or in your code you can refactor and just change a single spot and since all the file paths are built by concatenating aliases together, you can change a base directory or move something around and you don't have to change where those files are located in any of your code.
 
 
 ```
@@ -41,7 +41,7 @@ Muta.cog({
 Any method is automatically scoped to its component instance. Every component also has its own concept of state and action variables.
 The difference between referencing an action and a state: You can give them the same name, but to write to an action you have to put a '$' in front of of it.
 
-*State:
+`states`:
 
 ```
 states: {pageView: 'AUTH_PAGE'}
@@ -49,7 +49,7 @@ states: {pageView: 'AUTH_PAGE'}
 
 We have declared a state which is the current page view, and we set it to AUTH_PAGE which is an alias.
 
-- Actions:
+`actions` / `wires`:
 
 ```
 wires: {
@@ -71,7 +71,7 @@ actions: {pageView: '> pageView'}
 
 '> pageView': This is using a pseudo language called Meow for data flow that says when someone invokes the action pageView, it pushes the value to a state pageView. Wires do this for you.
 
-- Gears:
+`gears`:
 ```
 gears: {page: 'pageView'}
 ```
@@ -114,7 +114,7 @@ Muta.cog({
  It has a display for authorizing.
  All of your interesting code is probably either going to be put in components or traits.
 
- - Traits
+`traits`
  (Entity Component System design pattern)
  A behavior that let you dynamically compose the behaviors you want on something.
  Examples: Validation traits, Layout Traits, Data flow traits
@@ -138,7 +138,7 @@ Read the next page state, and write it into my pageView action, which changes pa
 If you put parameters in one of those Fetch traits you can say if the parameters ever change, automatically call something. If you have errors or status you can change those data points.
 Watch and set things up so they run off of it.
 
-- Relays
+`relays`
 
 Let's look at the beginning of the FETCH alias pointing to fetch.js:
 
@@ -169,7 +169,7 @@ Relays take the configuration properties you have passed in, and they wire thing
 
 You can define a params property and if you give me that I will bind to it as a state. If you give me a response I will consider that as an action I can write back out to.
 
-- Buses
+`buses`
 
 
 ```
