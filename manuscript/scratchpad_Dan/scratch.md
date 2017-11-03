@@ -44,6 +44,7 @@ Every component also has its own concept of state and action variables.
 The difference between referencing an action and a state: You can give them the same name, but to write to an action you have to put a '$' in front of of it.
 
 *State:
+
 ```
 states: {pageView: 'AUTH_PAGE'}
 ```
@@ -56,16 +57,18 @@ We have declared a state which is the current page view, and we set it to AUTH_P
 wires: {
            pageView: 'AUTH_PAGE'
        },
-       ```
+```
 
        is equivalent to:
 
 ```
 states: {pageView: 'AUTH_PAGE'}
 ```
+
 ```
 actions: {pageView: '> pageView'}
 ```
+
 This is using a pseudo language called Meow for data flow that says when someone invokes the action pageView, it pushes the value to a state pageView. Wires do this for you.
 
 *Gears:
@@ -106,7 +109,7 @@ Muta.cog({
        }
 
    });
-   ```
+```
 
  It has a display for authorizing.
  All of your interesting code is probably either going to be put in components or traits.
@@ -155,7 +158,7 @@ Muta.trait({
 
        },
        ...
-       ```
+```
 
 Relays take the configuration properties you have passed in, and they wire things up to create a local binding that you can work with. If it's a state it watches it and pipes the values down. If it's an action, it will push values back up.
 
