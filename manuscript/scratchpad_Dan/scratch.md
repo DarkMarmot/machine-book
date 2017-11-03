@@ -7,7 +7,8 @@ aliases: represent paths and APIS's. You can concatenate them together the way '
 In your deployment process or in your code you can refactor and just change a single spot and since all the filepaths are built by concatenating aliases together, you can change a base directory or move something around and you don't have to change where those files are located in any of your code.
 
 
-```Muta.cog({
+```
+Muta.cog({
 
        display: '<slot name="page"></slot>',
 
@@ -33,7 +34,8 @@ In your deployment process or in your code you can refactor and just change a si
            page: 'pageView'
        }
 
-   });```
+   });
+   ```
 
 Every component has its own scope which is the script you are working in. Any method is automatically scoped to its component instance.
 
@@ -42,22 +44,34 @@ Every component also has its own concept of state and action variables.
 The difference between referencing an action and a state: You can give them the same name, but to write to an action you have to put a '$' in front of of it.
 
 *State:
-```states: {pageView: 'AUTH_PAGE'}'''
+```
+states: {pageView: 'AUTH_PAGE'}
+```
 
 We have declared a state which is the current page view, and we set it to AUTH_PAGE which is an alias.
 
 *Actions:
 
-```wires: {
+```
+wires: {
            pageView: 'AUTH_PAGE'
-       },```
+       },
+       ```
+
        is equivalent to:
-```states: {pageView: 'AUTH_PAGE'}```
-```actions: {pageView: '> pageView'}```
+
+```
+states: {pageView: 'AUTH_PAGE'}
+```
+```
+actions: {pageView: '> pageView'}
+```
 This is using a pseudo language called Meow for data flow that says when someone invokes the action pageView, it pushes the value to a state pageView. Wires do this for you.
 
 *Gears:
-```gears: {page: 'pageView'}```
+```
+gears: {page: 'pageView'}
+```
 
 'page' is the name of the slot, so it defines a 'page' component and its URL is going to be derived from the state of the page view.
 
@@ -65,7 +79,8 @@ What happens in summary is the auth page loads into the display.
 
 If we go to AUTH_PAGE (auth.js):
 
-```Muta.cog({
+```
+Muta.cog({
 
        display: '<div class="page-auth"> Authorizing... </div> ',
 
@@ -90,7 +105,8 @@ If we go to AUTH_PAGE (auth.js):
                this.cog.scope.find('$pageView').write('MAIN_PAGE');
        }
 
-   });```
+   });
+   ```
 
  It has a display for authorizing.
  All of your interesting code is probably either going to be put in components or traits.
@@ -102,9 +118,11 @@ If we go to AUTH_PAGE (auth.js):
 
  In this instance, the framework itself has standard library that dynamically loads everything it needs when it needs it. To do network calls it calls a Fetch trait which does Window.Fetch API and will call APIS, and pump responses into the data points that it can reactively watch.
 
- ```traits: [
+ ```
+ traits: [
                {url: 'FETCH', api: 'AUTH_API', response: 'authResponse', auto: true}
-           ]```
+           ]
+           ```
 
 All traits have a URL that tell you the file its based on. Everything else is options you want to configure.
 
@@ -119,7 +137,8 @@ Watch and set things up so they run off of it.
 
 Let's look at the beginning of the FETCH alias pointing to fetch.js:
 
-```Muta.trait({
+```
+Muta.trait({
 
        relays: [
            {state: 'params'},
@@ -144,8 +163,10 @@ You can define a params property and if you give me that I will bind to it as a 
 
 *Buses
 
-``` buses: [
+```
+buses: [
               'params | *makeRequest'
-          ],```
+          ],
+          ```
 A bus is a way to set up data flow that you are explicitly wiring. This one says watch params and when it changes call a function makeRequest.
 
