@@ -4,6 +4,7 @@ intro/first build
 
 tutorial/some project
 
+meow/dictionary
 
 reference/action
 reference/aliases
@@ -21,6 +22,7 @@ reference/portals
 reference/relays
 reference/states
 reference/traits
+reference/valves
 reference/wires
 
 
