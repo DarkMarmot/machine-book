@@ -1,10 +1,10 @@
-cog: single component
-chains: array of components
-gears: placeholders that swap out components dynamically
+- cog: A single component. Every component has its own scope which is the script you are working in.
 
+- chains: array of components
 
-aliases: represent paths and APIS's. You can concatenate them together the way 'defines' work in the "C" language. You can precede any of your aliases with any alias that is the base directory.
-In your deployment process or in your code you can refactor and just change a single spot and since all the filepaths are built by concatenating aliases together, you can change a base directory or move something around and you don't have to change where those files are located in any of your code.
+- gears: placeholders that swap out components dynamically
+
+- aliases: represent paths and API's. You can concatenate them together the way 'defines' work in the "C" language. You can precede any of your aliases with any alias that is the base directory. In your deployment process or in your code you can refactor and just change a single spot and since all the file paths are built by concatenating aliases together, you can change a base directory or move something around and you don't have to change where those files are located in any of your code.
 
 
 ```
@@ -37,10 +37,8 @@ Muta.cog({
    });
    ```
 
-Every component has its own scope which is the script you are working in. Any method is automatically scoped to its component instance.
-
-Every component also has its own concept of state and action variables.
-
+- State / Actions
+Any method is automatically scoped to its component instance. Every component also has its own concept of state and action variables.
 The difference between referencing an action and a state: You can give them the same name, but to write to an action you have to put a '$' in front of of it.
 
 *State:
@@ -51,7 +49,7 @@ states: {pageView: 'AUTH_PAGE'}
 
 We have declared a state which is the current page view, and we set it to AUTH_PAGE which is an alias.
 
-*Actions:
+- Actions:
 
 ```
 wires: {
@@ -71,9 +69,9 @@ states: {pageView: 'AUTH_PAGE'}
 actions: {pageView: '> pageView'}
 ```
 
-This is using a pseudo language called Meow for data flow that says when someone invokes the action pageView, it pushes the value to a state pageView. Wires do this for you.
+'> pageView': This is using a pseudo language called Meow for data flow that says when someone invokes the action pageView, it pushes the value to a state pageView. Wires do this for you.
 
-*Gears:
+- Gears:
 ```
 gears: {page: 'pageView'}
 ```
@@ -116,7 +114,7 @@ Muta.cog({
  It has a display for authorizing.
  All of your interesting code is probably either going to be put in components or traits.
 
- *Traits
+ - Traits
  (Entity Component System design pattern)
  A behavior that let you dynamically compose the behaviors you want on something.
  Examples: Validation traits, Layout Traits, Data flow traits
@@ -133,14 +131,14 @@ Muta.cog({
 
 All traits have a URL that tell you the file its based on. Everything else is options you want to configure.
 
- In this example it calls the Auth API, when it returns with a response, it sends it to the $authResponse action.
+In this example it calls the Auth API, when it returns with a response, it sends it to the $authResponse action.
 
- Read the next page state, and write it into my pageView action, which changes pages. (Advance to the next page once we are authorized.) Auto means that it automatically fires.
+Read the next page state, and write it into my pageView action, which changes pages. (Advance to the next page once we are authorized.) Auto means that it automatically fires.
 
 If you put parameters in one of those Fetch traits you can say if the parameters ever change, automatically call something. If you have errors or status you can change those data points.
 Watch and set things up so they run off of it.
 
-*Relays
+- Relays
 
 Let's look at the beginning of the FETCH alias pointing to fetch.js:
 
@@ -171,7 +169,7 @@ Relays take the configuration properties you have passed in, and they wire thing
 
 You can define a params property and if you give me that I will bind to it as a state. If you give me a response I will consider that as an action I can write back out to.
 
-*Buses
+- Buses
 
 
 ```
