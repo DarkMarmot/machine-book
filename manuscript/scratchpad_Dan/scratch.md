@@ -59,7 +59,9 @@ wires: {
        },
 ```
 
-       is equivalent to:
+
+is equivalent to:
+
 
 ```
 states: {pageView: 'AUTH_PAGE'}
