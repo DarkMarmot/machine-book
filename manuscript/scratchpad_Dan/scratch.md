@@ -123,11 +123,13 @@ Muta.cog({
 
  In this instance, the framework itself has standard library that dynamically loads everything it needs when it needs it. To do network calls it calls a Fetch trait which does Window.Fetch API and will call APIS, and pump responses into the data points that it can reactively watch.
 
- ```
+
+```
  traits: [
                {url: 'FETCH', api: 'AUTH_API', response: 'authResponse', auto: true}
            ]
-           ```
+```
+
 
 All traits have a URL that tell you the file its based on. Everything else is options you want to configure.
 
@@ -141,6 +143,7 @@ Watch and set things up so they run off of it.
 *Relays
 
 Let's look at the beginning of the FETCH alias pointing to fetch.js:
+
 
 ```
 Muta.trait({
@@ -162,16 +165,21 @@ Muta.trait({
        ...
 ```
 
+
+
 Relays take the configuration properties you have passed in, and they wire things up to create a local binding that you can work with. If it's a state it watches it and pipes the values down. If it's an action, it will push values back up.
 
 You can define a params property and if you give me that I will bind to it as a state. If you give me a response I will consider that as an action I can write back out to.
 
 *Buses
 
+
 ```
 buses: [
               'params | *makeRequest'
           ],
-          ```
+```
+
+
 A bus is a way to set up data flow that you are explicitly wiring. This one says watch params and when it changes call a function makeRequest.
 
