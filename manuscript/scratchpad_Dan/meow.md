@@ -82,26 +82,28 @@ const hash = {furColor: 'red', dog: 'moo', cat: []};
 ```
 
 MORE COMMANDS
-`{`
+___
+
+`~`
 
 ```
 const meow = '~ bunny & dog }';
 ```
 
-
+___
 ```
 const meow = '~ bunny & dog, cat }';
 ```
 
-
+___
 `>`
 
 ```
 const meow = '~ bunny & dog, cat > cow';
 ```
 
-
-`>`
+___
+`{`
 
 ```
 const meow = '{ bunny & dog, cat > cow';
@@ -111,7 +113,7 @@ const meow = '{ bunny & dog, cat > cow';
 const meow = '{ bunny, dog, cat > cow';
 ```
 
-
+___
 `%`
 
    ```
@@ -122,13 +124,13 @@ const meow = '{ bunny, dog, cat > cow';
    const meow = '~ bunny & dog, cat % isHappy > cow';
    ```
 
-
+___
 `*`
 
    ```
    const meow = '~ bunny & dog, cat * toHappy > cow';
    ```
-
+___
 `|`
 
    ```

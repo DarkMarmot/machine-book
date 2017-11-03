@@ -50,8 +50,8 @@
       <file leaf-file-name="meow.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manuscript/scratchpad_Dan/meow.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+            <state relative-caret-position="121">
+              <caret line="132" column="3" lean-forward="false" selection-start-line="132" selection-start-column="3" selection-end-line="132" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -88,8 +88,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1706" />
-    <option name="y" value="80" />
+    <option name="x" value="1665" />
+    <option name="y" value="85" />
     <option name="width" value="1462" />
     <option name="height" value="769" />
   </component>
@@ -172,15 +172,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509729854458</updated>
-      <workItem from="1509729855656" duration="8362000" />
+      <workItem from="1509729855656" duration="8579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8362000" />
+    <option name="totallyTimeSpent" value="8579000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1706" y="80" width="1462" height="769" extended-state="0" />
+    <frame x="1665" y="85" width="1462" height="769" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24496877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -246,8 +246,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manuscript/scratchpad_Dan/meow.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        <state relative-caret-position="121">
+          <caret line="132" column="3" lean-forward="false" selection-start-line="132" selection-start-column="3" selection-end-line="132" selection-end-column="3" />
           <folding />
         </state>
       </provider>
