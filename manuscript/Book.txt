@@ -4,6 +4,7 @@ intro/first build
 
 tutorial/some project
 
+meow/dictionary
 
 reference/action
 reference/aliases
